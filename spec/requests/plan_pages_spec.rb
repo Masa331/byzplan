@@ -23,6 +23,36 @@ describe "PlanPages" do
 				expect{click_button submit}.to change(Plan, :count).by(1)
 			end
 		end
+	end
 
+	describe "visiting show page" do
+		let(:plan){FactoryGirl.create(:plan)}
+
+		describe "with non-existant plan_id" do
+			before do
+				plan.plan_id = "ldkasc6545"
+				visit plan_path(plan.plan_id)
+			end
+
+			it{should have_selector('h1', text: "non-existant plan")}
+		end
+
+		describe "of existing plan" do
+			before{visit plan_path(plan.plan_id)}
+
+			it{should have_selector('h1', text: "Plan page")}
+			it{should have_selector('p.plan_name', text: "#{plan.name}")}
+			it{should have_selector('p.plan_id', text: "#{plan.plan_id}")}
+			it{should have_selector('p.plan_category', text: "#{plan.category}")}
+
+			describe "edditing Plan's data" do
+				before do
+					fill_in "plan_category", with: "Restauraterstvi"
+					click_button "Update Plan"
+				end
+
+				it{should have_selector('p.plan_category', text: "Restauraterstvi")}
+			end
+		end
 	end
 end

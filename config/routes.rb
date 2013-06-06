@@ -1,6 +1,7 @@
 Byzplan::Application.routes.draw do
 
   root to: 'static_pages#home'
+  match '/nonexistant', to: 'static_pages#non_existant_plan'
 
   resources :plans
 

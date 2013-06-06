@@ -1,2 +1,13 @@
-<h1>Plans#show</h1>
-<p>Find me in app/views/plans/show.html.erb</p>
+<h1>Plan page</h1>
+
+<p class="plan_name">Plan's name: <%= @plan.name %></p>
+<p class="plan_id">Plan's ID: <%= @plan.plan_id %> </p>
+<p class="plan_category">Plan's category: <%= @plan.category %></p>
+
+<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
+	<p>
+	<%= f.label :Category %>
+	<%= f.text_field :category %>
+	</p>
+	<p class="button"><%= f.submit %></p>
+<% end %>
