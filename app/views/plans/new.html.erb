@@ -1,0 +1,9 @@
+<h1>Make a plan</h1>
+
+<%= form_for @plan do |f| %>
+	<p>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	</p>
+	<p class="button"><%= f.submit %></p>
+<% end %>
