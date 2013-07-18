@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def non_existant_plan
   end
+
+  def about
+  end
 end

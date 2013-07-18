@@ -11,14 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606082032) do
+ActiveRecord::Schema.define(:version => 20130619175151) do
 
   create_table "plans", :force => true do |t|
     t.string   "name"
     t.string   "plan_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "category"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "summary"
+    t.text     "team"
+    t.text     "product"
+    t.text     "customers"
+    t.text     "market"
+    t.text     "competitors"
+    t.text     "delivery"
+    t.text     "partners"
   end
 
   add_index "plans", ["plan_id"], :name => "index_plans_on_plan_id"

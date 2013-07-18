@@ -1,13 +1,26 @@
-<h1>Plan page</h1>
+<div class="row">
+	
+		<div class="span12 well", id="plan_header">
+			URL adresa plánu: <b><%= plan_url %></b>
+			<br>
+			<%= link_to "Exportovat plán", generate_path, class: "btn btn-margin" %>
+			<%= link_to "Znicit stare plany", destroy_path, class: "btn btn-margin" %>
+		</div>
+</div>
 
-<p class="plan_name">Plan's name: <%= @plan.name %></p>
-<p class="plan_id">Plan's ID: <%= @plan.plan_id %> </p>
-<p class="plan_category">Plan's category: <%= @plan.category %></p>
-
-<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-	<p>
-	<%= f.label :Category %>
-	<%= f.text_field :category %>
-	</p>
-	<p class="button"><%= f.submit %></p>
-<% end %>
+<div class="row">
+	<div class="span8">
+		<%= render current_step %>
+	</div>
+	<div class="span3", id="sidebar">
+			<h3>Sekce plánu</h3>
+			<ul class="my-ul">
+				<li><%= link_to "Shrnutí projektu", plan_path(@plan.plan_id, step: "summary") %></li>
+				<li><%= link_to "Popis produktu", plan_path(@plan.plan_id, step: "product") %></li>
+				<li><%= link_to "Obchodní model", plan_path(@plan.plan_id, step: "delivery") %></li>
+				<li><%= link_to "Zákazníci", plan_path(@plan.plan_id, step: "customers") %></li>
+				<li><%= link_to "Trh", plan_path(@plan.plan_id, step: "market") %></li>
+				<li><%= link_to "Tým projektu", plan_path(@plan.plan_id, step: "team") %></li>
+			</ul>
+	</div>
+</div>

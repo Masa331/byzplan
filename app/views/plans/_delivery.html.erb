@@ -1,0 +1,27 @@
+<h3>Obchodní model:</h3>
+<p>
+	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
+			<%= f.text_area :delivery, value: "#{@plan.delivery}", class: "wysihtml5-textarea span8", id: "delivery", rows: 15 %>
+			<%= render 'wysy_editor' %>
+			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
+	<% end %>
+</p>
+
+<h5>Obsah sekce:</h5>
+<p>
+	Obchodní model je jedna z nejdůležitějších částí business plánu. Popište jakým způsobem prodáte svůj produkt zákazníkovi, jak chcete šířit povědomí o projektu a produktu, jakým způsobem plánujete růst, zda a případně s jakými výsledky jste provedli průzkum trhu, v čem je Váš obchodní model lepší než obchodní model případné konkurence atd. Vysvětlete, proč by si měli zákazníci pořídit službu/produkt právě u Vás, jak budete shánět nové zákazníky pečovat o ty stálé apod. Jakým způsobem bude projekt vydělávat, na co se bude zaměřovat. Máte nějaké strategické partnery?
+</p>
+
+<h5>Příklad:</h5>
+	Pro Továrnu na čokoládu by mohlo zkrácené shrnutí znít nějak takto:
+<p>
+	<i>Továrna na čokoládu je naprosto inovativní projekt, který nemá obdoby v ČR ani ve světě. Přenáší výrobu čokolády z nákladných manufaktur do jedné automatizované továrny, čímž zjenodušuje kontrolu kvality a snižuje časové i finanční náklady na výrobu o desítky procent.</i>
+</p>
+<p>
+	<i>K nápadu mě přivedl můj desetiletý syn, když se mě zeptal, proč musíme čokoládu objednávat týdny dopředu a proč se na ní tedy nepostaví továrna jako na automobily.</i>
+</p>
+<p>
+	<i>Do tohoto projektu jsem ochotný investovat všechen svůj čas i prostředky. Pro čokoládu mám velkou vášeň. Navíc mám praxi i z továrenským provozů, kde jsem provozoval celosvětovou síť továren na beton, takže mám praxi z HR, PR, logistiky apod.</i>
+</p>
+
+<%= render 'wysy_script' %>

@@ -1,0 +1,74 @@
+@import "bootstrap";
+
+.page-break { display:block; clear:both; page-break-after:always; }
+
+
+.header {
+
+}
+
+#contacts {
+	position:absolute;
+	bottom: 20px;
+	left:20px;
+}
+
+.content {
+	margin-top: 50px;
+	height:1000px;
+}
+
+.pdf-footer {
+	position:absolute;
+	width:1000px;
+	bottom:3px;
+	left:3px;
+
+	.upper-footer {
+		margin-left:50%;
+		margin-right:50%;
+		font-size:1.2em;
+		margin-bottom:3px;
+	}
+
+	.lower-footer {
+		border-top:1px solid gray;
+	}
+
+	span {
+		margin-left:5px;
+	}
+}
+
+.page-wrapper {
+	position:relative;
+	height:1360px;
+	width:1000px;
+//	border:1px solid black;
+}
+
+#title-page-heading {
+	width:1000px;
+	text-align:center;
+	position:absolute;
+	top:300px;
+	h1 {
+		font-size:4em;
+	}
+}
+
+.section {
+	position:absolute;
+	top: 50px;
+	left:20px;
+
+	h2 {
+		margin-bottom:15px;
+	}
+}
+
+.section-content {
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+}

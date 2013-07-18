@@ -1,0 +1,1 @@
+Time::DATE_FORMATS[:czech_format] = '%d.%m.%Y'

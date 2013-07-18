@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '~> 2.3.1.0'
+gem 'wysihtml5_gem', '0.3.0'
+gem 'wicked_pdf'
+gem 'whenever'
 
 group :development, :test do
 	gem 'sqlite3'

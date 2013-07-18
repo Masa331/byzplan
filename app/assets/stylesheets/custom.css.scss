@@ -1,4 +1,71 @@
 @import "bootstrap";
+@import "wysihtml5_gem/wysihtml5";
+
+
+
+.muj-navbar {
+	height: 50px;
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
+}
+.nav-pills {
+	margin-top: 10px;
+}
+.lead {
+	margin-top:10px;
+}
+
+.jumbotron {
+	margin-bottom: 20px;
+	border-bottom: 1px solid black;
+
+	h1 {
+		font-size: 65px;
+		line-height: 1.1em
+	}
+
+	a {
+		margin-bottom:30px;
+	}
+}
+.wysihtml5-textarea {
+	margin-bottom:2px;
+}
+
+.btn-margin {
+	margin-top:3px;
+}
+
+.my-ul {
+	font-size:1.2em;
+}
+
+#sidebar {
+	margin-left:40px;
+}
+
+#logo {
+	margin-top:5px;
+}
+
+#wysihtml5-toolbar {
+	margin-bottom:8px;
+}
+
+#plan_name {
+	font-size: 1.5em;
+	height: 30px;
+	width: 400px;
+	margin-bottom: 0px;
+}
+
+#plan_header_name {
+	color:green;
+	font-weight:bold;
+}
+#plan_header {
+	width:900px;
+}
 
 footer {
 	margin-top:45px;

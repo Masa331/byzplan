@@ -2,27 +2,33 @@
 #
 # Table name: plans
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  plan_id    :string(255)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  category   :string(255)
-#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  plan_id     :string(255)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  summary     :text
+#  team        :text
+#  product     :text
+#  customers   :text
+#  market      :text
+#  competitors :text
+#  delivery    :text
+#  partners    :text
+
 
 class Plan < ActiveRecord::Base
 
-#  require 'securerandom'
+	attr_accessible :name, :summary, :team, :product, :customers, :market, :competitors, :delivery, :partners
+	attr_accessor :current_step
 
-  attr_accessible :name, :category
+	validates :name, presence: true, length:{maximum:50}
+	validates :plan_id, presence: true, uniqueness: true
 
- # before_save :generate_plan_id
+	def self.clean_old_plans
+		Plan.where("updated_at < ?", (Time.now - 8.days)).each do |plan|
+			plan.destroy
+		end
+	end
 
-  validates :name, presence: true, length:{maximum:50}
-  validates :category, length:{maximum:50}
-  validates :plan_id, presence: true, uniqueness: true
-
-#  def generate_plan_id
-#  	self.plan_id = SecureRandom.urlsafe_base64(20)
-#  end
 end

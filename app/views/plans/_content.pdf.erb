@@ -1,0 +1,7 @@
+<div class="row">
+	<div class="span12 content">
+		<h1><%= section %></h1>
+		<%= raw @plan.send(section.downcase.to_sym) %>
+		<%# Pozor na tohle - vyresit pozdeji! Nic neni escapovano a tak je mozne XSS %>
+	</div>
+</div>

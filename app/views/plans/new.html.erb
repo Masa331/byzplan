@@ -1,9 +1,13 @@
-<h1>Make a plan</h1>
 
-<%= form_for @plan do |f| %>
-	<p>
-	<%= f.label :name %>
-	<%= f.text_field :name %>
-	</p>
-	<p class="button"><%= f.submit %></p>
-<% end %>
+<div class="row">
+	<div class="span12">
+		<h1>Zadejte jméno svého nového projektu:</h1>
+
+		<%= form_for @plan do |f| %>
+			<p>
+			<%= f.text_field :name, size: 50, class: "form", placeholder: 'Např. Továrna na čokoládu' %>
+			</p>
+			<p class="button"><%= f.submit class: "btn btn-primary", value: "Vytvořit plán" %></p>
+		<% end %>
+	</div>
+</div>

@@ -1,9 +1,10 @@
-<div class="navbar">
-	<div class="navbar-inner">
-		<a class="brand" href="/">Byzplan</a>
-		<ul class="nav pull-right">
-			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "Make a plan", new_plan_path %></li>
-		</ul>
-	</div>
+<div class="muj-navbar">
+	<%= link_to image_tag("logo.png", id: "logo"), root_path %>
+	<ul class="nav nav-pills pull-right">
+		<% if plan_exists? %>
+			<li><%= link_to session[:plan_name], plans_url, id: "plan_header_name" %></li>
+		<% end %>
+		<li><%= link_to "Nový plán", new_plan_path %></li>
+		<li><%= link_to "O Business plánu", about_path %></li>
+	</ul>
 </div>
