@@ -1,4 +1,4 @@
-<h3>Zákazníci:</h3>
+<h3 class="h3-border">Zákazníci:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
 			<%= f.text_area :customers, value: "#{@plan.customers}", class: "wysihtml5-textarea span8", id: "customers", rows: 15 %>

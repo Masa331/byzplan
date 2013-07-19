@@ -62,6 +62,7 @@ class PlansController < ApplicationController
 
     def serve_pdf_plan
         if @plan = Plan.find_by_plan_id(session[:plan_id])
+            @page_number ||= 0
             send_data WickedPdf.new.pdf_from_string(render_to_string('plans/show.pdf.erb', layout: 'layouts/pdf.pdf.erb')), filename: 'Byzplan.pdf', lowquality: false
         end
     end

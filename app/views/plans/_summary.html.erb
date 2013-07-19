@@ -1,4 +1,4 @@
-<h3>Shrnutí projektu:</h3>
+<h3 class="h3-border">Shrnutí projektu:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
 			<%= f.text_area :summary, value: "#{@plan.summary}", class: "wysihtml5-textarea span8", id: "summary", rows: 15 %>

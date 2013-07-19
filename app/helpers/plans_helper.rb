@@ -19,4 +19,9 @@ module PlansHelper
     	time = Time.now
     	time.to_formatted_s(:czech_format)
     end
+
+    def page_number
+        @page_number = 0 if @page_number > 6
+        @page_number +=1
+    end
 end

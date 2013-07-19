@@ -11,6 +11,10 @@ group :development, :test do
 	gem 'rspec-rails', '2.11.0'
 end
 
+group :development, :production do
+	gem 'capistrano'
+end
+
 group :development do
 	gem 'annotate', '2.5.0'
 end
@@ -30,5 +34,5 @@ end
 gem 'jquery-rails'
 
 group :production do
-	gem 'pg', '0.12.2'
+	gem "mysql"
 end

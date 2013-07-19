@@ -1,4 +1,4 @@
-<h3>Konkurence:</h3>
+<h3 class="h3-border">Konkurence:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
 			<%= f.text_area :competitors, value: "#{@plan.competitors}", class: "wysihtml5-textarea span8", id: "competitors", rows: 15 %>

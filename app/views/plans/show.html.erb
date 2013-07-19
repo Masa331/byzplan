@@ -12,8 +12,8 @@
 	<div class="span8">
 		<%= render current_step %>
 	</div>
-	<div class="span3", id="sidebar">
-			<h3>Sekce plánu</h3>
+	<div class="span4">
+			<h3 class="h3-border">Sekce plánu:</h3>
 			<ul class="my-ul">
 				<li><%= link_to "Shrnutí projektu", plan_path(@plan.plan_id, step: "summary") %></li>
 				<li><%= link_to "Popis produktu", plan_path(@plan.plan_id, step: "product") %></li>

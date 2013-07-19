@@ -1,4 +1,4 @@
-<h3>Partněři projektu:</h3>
+<h3 class="h3-border">Partněři projektu:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
 			<%= f.text_area :partners, value: "#{@plan.partners}", class: "wysihtml5-textarea span8", id: "partners", rows: 15 %>
