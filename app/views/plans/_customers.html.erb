@@ -1,27 +1,15 @@
 <h3 class="h3-border">Zákazníci:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :customers, value: "#{@plan.customers}", class: "wysihtml5-textarea span8", id: "customers", rows: 15 %>
+			<%= f.text_area :customers, value: "#{@plan.customers}", class: "wysihtml5-textarea span9", id: "customers", rows: 15 %>
 			<%= render 'wysy_editor' %>
 			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
 	<% end %>
 </p>
 
-<h5>Obsah sekce:</h5>
+<h5>Co by měl text obsahovat:</h5>
 <p>
-	Abyste mohli úspěšně podnikat, je dobré znát detailně Vašeho zákazníka. Zkuste popsat, jaký je Váš typický zákazník, jak se chová, jaké má zvyklosti, co má a nemá rád, jestli se jedná o firmy nebo fyzické osoby apod.
-</p>
-
-<h5>Příklad:</h5>
-	Pro Továrnu na čokoládu by mohlo zkrácené shrnutí znít nějak takto:
-<p>
-	<i>Továrna na čokoládu je naprosto inovativní projekt, který nemá obdoby v ČR ani ve světě. Přenáší výrobu čokolády z nákladných manufaktur do jedné automatizované továrny, čímž zjenodušuje kontrolu kvality a snižuje časové i finanční náklady na výrobu o desítky procent.</i>
-</p>
-<p>
-	<i>K nápadu mě přivedl můj desetiletý syn, když se mě zeptal, proč musíme čokoládu objednávat týdny dopředu a proč se na ní tedy nepostaví továrna jako na automobily.</i>
-</p>
-<p>
-	<i>Do tohoto projektu jsem ochotný investovat všechen svůj čas i prostředky. Pro čokoládu mám velkou vášeň. Navíc mám praxi i z továrenským provozů, kde jsem provozoval celosvětovou síť továren na beton, takže mám praxi z HR, PR, logistiky apod.</i>
+	Abyste mohli úspěšně podnikat, je dobré znát detailně Vašeho zákazníka. Zkuste popsat, jaký Váš typický zákazník je, jak se chová, jaké má zvyklosti, co má a nemá rád atd. Můžete také ilustrovat, proč jste kvůli popsanému zákazníkovi navrhli takový a takový business model nebo produkt.
 </p>
 
 <%= render 'wysy_script' %>

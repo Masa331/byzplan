@@ -70,7 +70,7 @@ class PlansController < ApplicationController
     private
 
     def steps
-        %w[summary team product customers market delivery]
+        %w[summary team product customers market delivery card]
     end
 
 end

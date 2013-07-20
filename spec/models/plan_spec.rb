@@ -15,6 +15,7 @@
 #  competitors :text
 #  delivery    :text
 #  partners    :text
+#  card        :text
 #
 
 require 'spec_helper'
@@ -35,6 +36,7 @@ describe "Plan" do
 	it{should respond_to(:competitors)}
 	it{should respond_to(:delivery)}
 	it{should respond_to(:partners)}
+	it{should respond_to(:card)}
 
 
 	describe "with blank name" do

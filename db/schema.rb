@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130619175151) do
+ActiveRecord::Schema.define(:version => 20130720075423) do
 
   create_table "plans", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130619175151) do
     t.text     "competitors"
     t.text     "delivery"
     t.text     "partners"
+    t.text     "card"
   end
 
   add_index "plans", ["plan_id"], :name => "index_plans_on_plan_id"

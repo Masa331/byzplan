@@ -45,9 +45,9 @@ describe "PlanPages" do
 				visit plan_path(plan.plan_id)
 			end
 
-			it{should have_selector('h3', text: "Shrnutí")}
+			it{should have_selector('h3', text: "Představení projektu")}
 
-			it{should have_selector('.span8')}
+			it{should have_selector('.span9')}
 			it{should have_selector('.span3')}
 
 			describe "should have proper step links and buttons" do
@@ -55,14 +55,14 @@ describe "PlanPages" do
 				xit{should have_link('Export plan')}
 				xit{should have_link('Mail plan URL')}
 
-				it{should have_link('Shrnutí')}
-				it{should have_link('Tým')}
-				it{should have_link('Popis')}
+				it{should have_link('Hlavička plánu')}
+				it{should have_link('Představení projektu')}
+				it{should have_link('Popis produktu')}
+				it{should have_link('Obchodní model')}
+				it{should have_link('Zákazníci')}
 				it{should have_link('Trh')}
-				it{should have_link('Zákazn')}
-				it{should have_link('Konkurence')}
-				it{should have_link('Prodej')}
-				it{should have_link('Partneři')}
+				it{should have_link('Tým projektu')}
+
 
 				it{should have_button('Ulo')}
 			end
@@ -102,9 +102,9 @@ describe "PlanPages" do
 				it{should_not have_field('plan_product')}
 			end
 
-			describe "with step parameter for competitors field" do
-				before{visit plan_path(plan.plan_id, step: 'competitors')}
-				it{should have_field('competitors', with: "#{plan.competitors}")}
+			describe "with step parameter for contacts field" do
+				before{visit plan_path(plan.plan_id, step: 'card')}
+				it{should have_field('name', with: "#{plan.name}")}
 				it{should_not have_field('plan_summary')}
 				it{should_not have_field('plan_product')}
 			end
@@ -125,9 +125,9 @@ describe "PlanPages" do
 
 			describe "with step parameter for partners field" do
 				before{visit plan_path(plan.plan_id, step: 'partners')}
-				it{should have_field('partners', with: "#{plan.partners}")}
-				it{should_not have_field('plan_summary')}
-				it{should_not have_field('plan_product')}
+				xit{should have_field('partners', with: "#{plan.partners}")}
+				xit{should_not have_field('plan_summary')}
+				xit{should_not have_field('plan_product')}
 			end
 		end
 	end

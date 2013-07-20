@@ -9,13 +9,14 @@
 </div>
 
 <div class="row">
-	<div class="span8">
+	<div class="span9">
 		<%= render current_step %>
 	</div>
-	<div class="span4">
+	<div class="span3">
 			<h3 class="h3-border">Sekce plánu:</h3>
 			<ul class="my-ul">
-				<li><%= link_to "Shrnutí projektu", plan_path(@plan.plan_id, step: "summary") %></li>
+				<li><%= link_to "Hlavička plánu", plan_path(@plan.plan_id, step: "card") %></li>
+				<li><%= link_to "Představení projektu", plan_path(@plan.plan_id, step: "summary") %></li>
 				<li><%= link_to "Popis produktu", plan_path(@plan.plan_id, step: "product") %></li>
 				<li><%= link_to "Obchodní model", plan_path(@plan.plan_id, step: "delivery") %></li>
 				<li><%= link_to "Zákazníci", plan_path(@plan.plan_id, step: "customers") %></li>

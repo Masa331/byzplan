@@ -1,0 +1,13 @@
+<h3>Hlavička plánu:</h3>
+<p>Zde můžete editovat název plánu a Vaše kontaktní údaje, které budou zobrazeny v exportovaném PDF dokument.</p>
+
+<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
+	<h5>Název plánu:</h5>
+	<%= f.text_field :name, class: "form", value: "#{@plan.name}", id: "plan_name" %>
+	<h5>Kontaktní údaje:</h5>
+	<%= f.text_area :card, value: "#{@plan.card}", class: "wysyhtml5-textarea", id:"card", rows: 4 %>
+	<%= render 'wysy_editor' %>
+	<br>
+	<%= f.submit "Uložit hlavičku", class: "btn btn-primary" %>
+<% end %>
+<%= render 'wysy_script' %>

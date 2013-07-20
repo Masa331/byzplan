@@ -1,7 +1,7 @@
 <h3 class="h3-border">Trh:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :market, value: "#{@plan.market}", class: "wysihtml5-textarea span8", id: "market", rows: 15 %>
+			<%= f.text_area :market, value: "#{@plan.market}", class: "wysihtml5-textarea span9", id: "market", rows: 15 %>
 			<%= render 'wysy_editor' %>
 			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
 	<% end %>
@@ -12,16 +12,5 @@
 	Stejně jako je potřeba znát Vašeho zákazníka, je potřeba znát i trh, na který se chystáte vstoupit. Existuje vůbec? Jakým způsobem momentálně funguje, jak se na něm produkty podobné tomu Vašemu prodávají, jak je velký, kolik se v něm utratí peněz, má nějaké specifické charakteristiky? Je na daném trhu nějaká přímá nebo nepřímá konkurence? Jak je konkurence silná?
 </p>
 
-<h5>Příklad:</h5>
-	Pro Továrnu na čokoládu by mohlo zkrácené shrnutí znít nějak takto:
-<p>
-	<i>Továrna na čokoládu je naprosto inovativní projekt, který nemá obdoby v ČR ani ve světě. Přenáší výrobu čokolády z nákladných manufaktur do jedné automatizované továrny, čímž zjenodušuje kontrolu kvality a snižuje časové i finanční náklady na výrobu o desítky procent.</i>
-</p>
-<p>
-	<i>K nápadu mě přivedl můj desetiletý syn, když se mě zeptal, proč musíme čokoládu objednávat týdny dopředu a proč se na ní tedy nepostaví továrna jako na automobily.</i>
-</p>
-<p>
-	<i>Do tohoto projektu jsem ochotný investovat všechen svůj čas i prostředky. Pro čokoládu mám velkou vášeň. Navíc mám praxi i z továrenským provozů, kde jsem provozoval celosvětovou síť továren na beton, takže mám praxi z HR, PR, logistiky apod.</i>
-</p>
 
 <%= render 'wysy_script' %>

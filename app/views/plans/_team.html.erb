@@ -1,7 +1,7 @@
 <h3 class="h3-border">Tým projektu:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :team, value: "#{@plan.team}", class: "wysihtml5-textarea span8", id: "team", rows: 15 %>
+			<%= f.text_area :team, value: "#{@plan.team}", class: "wysihtml5-textarea span9", id: "team", rows: 15 %>
 			<%= render 'wysy_editor' %>
 			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
 	<% end %>
@@ -9,19 +9,8 @@
 
 <h5>Obsah sekce:</h5>
 <p>
-	Zde popište detailně tým, který se bude realizací projektu zabývat. Seznamte čtenáře s hlavními postavami týmu, jejich rolemi v projektu a zkušenostmi.
+	Zde popište detailně tým, který se bude realizací projektu zabývat. Seznamte čtenáře s hlavními postavami týmu, jejich rolemi v projektu, zkušenostmi a motivací. Někteří investoři a odborníci z oboru tvrdí, že dobrý tým je na projektu vůbec to nejdůležitější.
 </p>
 
-<h5>Příklad:</h5>
-	Pro Továrnu na čokoládu by mohlo zkrácené shrnutí znít nějak takto:
-<p>
-	<i>Továrna na čokoládu je naprosto inovativní projekt, který nemá obdoby v ČR ani ve světě. Přenáší výrobu čokolády z nákladných manufaktur do jedné automatizované továrny, čímž zjenodušuje kontrolu kvality a snižuje časové i finanční náklady na výrobu o desítky procent.</i>
-</p>
-<p>
-	<i>K nápadu mě přivedl můj desetiletý syn, když se mě zeptal, proč musíme čokoládu objednávat týdny dopředu a proč se na ní tedy nepostaví továrna jako na automobily.</i>
-</p>
-<p>
-	<i>Do tohoto projektu jsem ochotný investovat všechen svůj čas i prostředky. Pro čokoládu mám velkou vášeň. Navíc mám praxi i z továrenským provozů, kde jsem provozoval celosvětovou síť továren na beton, takže mám praxi z HR, PR, logistiky apod.</i>
-</p>
 
 <%= render 'wysy_script' %>

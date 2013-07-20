@@ -19,7 +19,7 @@ describe "StaticPages" do
         visit about_path
       end
 
-      it{should have_selector('h1', text: 'O Business')}
+      it{should have_selector('h3', text: 'Co to je business plán')}
     end
 
 	describe "header" do
