@@ -3,7 +3,6 @@ Byzplan::Application.routes.draw do
   root to: 'static_pages#home'
   match '/nonexistant', to: 'static_pages#non_existant_plan'
   match '/generate', to: 'plans#serve_pdf_plan'
-  match '/destroy', to: 'plans#destroy_old'
   match '/about', to: 'static_pages#about'
 
   resources :plans
