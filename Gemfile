@@ -8,6 +8,7 @@ gem 'wkhtmltopdf-binary'
 gem 'whenever'
 gem 'execjs'
 gem 'therubyracer'
+gem 'rvm-capistrano'
 
 group :development, :test do
 	gem 'sqlite3'
