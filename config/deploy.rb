@@ -1,6 +1,7 @@
 require 'rvm/capistrano'
 require 'bundler/capistrano'
 
+set :rvm_type, :system
 set :application, "byzplancz"
 set :repository, "git@github.com:Masa331/byzplan.git"
 set :scm, "git"
