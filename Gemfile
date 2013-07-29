@@ -12,8 +12,6 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'whenever'
 gem 'execjs'
-gem 'therubyracer', '0.10.2'
-gem 'libv8'
 gem 'rvm-capistrano'
 
 group :development, :test do
