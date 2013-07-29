@@ -5,6 +5,8 @@ gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'wysihtml5_gem', '0.3.0'
 gem 'wicked_pdf'
 gem 'whenever'
+gem 'execjs'
+gem 'therubyracer'
 
 group :development, :test do
 	gem 'sqlite3'
