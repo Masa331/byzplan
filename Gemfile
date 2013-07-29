@@ -34,5 +34,5 @@ end
 gem 'jquery-rails'
 
 group :production do
-	gem "mysql"
+	gem "mysql", "~> 2.9.1"
 end

@@ -1,15 +1,15 @@
 require 'bundler/capistrano'
 
-set :application, "byzplan"
+set :application, "byzplancz"
 set :repository, "git@github.com:Masa331/byzplan.git"
 set :scm, "git"
 
-role :web, "server3.railshosting.cz"
-role :app, "server3.railshosting.cz"
-role :db,  "server3.railshosting.cz", :primary => true
+role :web, "server8.railshosting.cz"
+role :app, "server8.railshosting.cz"
+role :db,  "server8.railshosting.cz", :primary => true
 
-set :deploy_to, "/home/byzplan/app/"
-set :user, "byzplan"
+set :deploy_to, "/home/byzplancz/app/"
+set :user, "byzplancz"
 
 set :use_sudo, false
 
