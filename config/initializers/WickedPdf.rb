@@ -1,1 +1,1 @@
-WickedPdf.config = {exe_path: 'C:\wkhtmltopdf\wkhtmltopdf.exe'}
+# WickedPdf.config = {exe_path: 'C:\wkhtmltopdf\wkhtmltopdf.exe'}

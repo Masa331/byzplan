@@ -104,7 +104,7 @@ describe "PlanPages" do
 
 			describe "with step parameter for contacts field" do
 				before{visit plan_path(plan.plan_id, step: 'card')}
-				it{should have_field('name', with: "#{plan.name}")}
+				it{should have_field('plan_name', with: "#{plan.name}")}
 				it{should_not have_field('plan_summary')}
 				it{should_not have_field('plan_product')}
 			end
