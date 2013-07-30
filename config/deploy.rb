@@ -5,6 +5,7 @@ set :rvm_type, :system
 set :application, "byzplancz"
 set :repository, "git@github.com:Masa331/byzplan.git"
 set :scm, "git"
+set :normalize_asset_timestamps, false
 
 role :web, "server8.railshosting.cz"
 role :app, "server8.railshosting.cz"
