@@ -10,5 +10,5 @@
  *
  *= require_self
  *= require_tree .
- *= require pdf.css
+ *= require pdf.css.scss
  */
