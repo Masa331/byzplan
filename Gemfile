@@ -11,7 +11,6 @@ gem 'wysihtml5_gem', '0.3.0'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'whenever'
-gem 'therubyracer'
 gem 'execjs'
 gem 'rvm-capistrano'
 
