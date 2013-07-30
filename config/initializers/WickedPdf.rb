@@ -1,1 +1,1 @@
-# WickedPdf.config = {exe_path: 'C:\wkhtmltopdf\wkhtmltopdf.exe'}
+WickedPdf.config = {exe_path: 'usr/home/byzplancz/app/shared/bundle/ruby/1.9.1/bin/wkhtmltopdf'}
