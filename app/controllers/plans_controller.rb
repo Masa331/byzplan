@@ -14,7 +14,6 @@ class PlansController < ApplicationController
             redirect_to plan_url(@plan.plan_id)
             flash[:success] = "Plán byl úspěšně založen. Nyní se můžete pustit do psaní. Pokyny k jednotlivým sekcím najdete vždy pod editačním oknem."
             session[:plan_id] = @plan.plan_id
-            session[:plan_name] = @plan.name
 #            UserMailer.url_mail(@user).deliver
         else
             flash[:error] = 'Zadejte prosím jméno Vašeho projektu'
@@ -25,8 +24,7 @@ class PlansController < ApplicationController
     def show
         if @plan = Plan.find_by_plan_id(params[:id])
             session[:plan_id] = @plan.plan_id
-            session[:step] ||= "summary"
-            session[:plan_name] = @plan.name        
+            session[:step] ||= "summary"  
             session[:step] = params[:step] if steps.include?(params[:step])
         
             respond_to do |format|
