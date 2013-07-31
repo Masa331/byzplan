@@ -1,7 +1,7 @@
-if RUBY_VERSION =~ /1.9/
+#if RUBY_VERSION =~ /1.9/
   Encoding.default_external = Encoding::UTF_8
   Encoding.default_internal = Encoding::UTF_8
-end
+#end
 
 source 'https://rubygems.org'
 
@@ -42,5 +42,5 @@ end
 gem 'jquery-rails'
 
 group :production do
-	gem "mysql", "~> 2.9.1"
+	gem "mysql2"
 end
