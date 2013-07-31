@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class StaticPagesController < ApplicationController
   def home
   end
