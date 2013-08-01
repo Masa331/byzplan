@@ -1,9 +1,28 @@
 <h3 class="h3-border">Představení projektu:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :summary, value: "#{@plan.summary}", class: "wysihtml5-textarea span9", id: "summary", rows: 15 %>
+			<%= f.text_area :summary, value: "#{@plan.summary}", class: "wysihtml5-textarea span9 counted", id: "summary", rows: 15 %>
 			<%= render 'wysy_editor' %>
 			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
+
+
+<span class="countdown"></span>
+
+<script type="text/javascript">function updateCountdown() {
+    // 140 is the max message length
+    var remaining = 140 - jQuery('.counted').val().length;
+    jQuery('.countdown') .text(remaining + ' characters remaining.');
+}
+
+jQuery(document).ready(function($) {
+    updateCountdown();
+    $('.counted').change(updateCountdown);
+    $('.counted').keyup(updateCountdown);
+});</script>
+
+
+
+
 	<% end %>
 </p>
 
