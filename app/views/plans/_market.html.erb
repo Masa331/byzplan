@@ -1,13 +1,12 @@
 <h3 class="h3-border">Trh:</h3>
-<p>
-	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :market, value: "#{@plan.market}", class: "tinymce span9", id: "market", rows: 15 %>
-			<%= tinymce %>
-			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
-	<% end %>
-</p>
 
-<h5>Obsah sekce:</h5>
+<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
+		<%= f.text_area :market, value: "#{@plan.market}", class: "tinymce span9", id: "market", rows: 15 %>
+		<%= tinymce %>
+		<%= f.submit "Uložit sekci", class: "btn btn-margin btn-primary" %>
+<% end %>
+
+<h4>Obsah sekce:</h4>
 <p>
 	Stejně jako je potřeba znát Vašeho zákazníka, je potřeba znát i trh, na který se chystáte vstoupit. Existuje vůbec? Jakým způsobem momentálně funguje, jak se na něm produkty podobné tomu Vašemu prodávají, jak je velký, kolik se v něm utratí peněz, má nějaké specifické charakteristiky? Je na daném trhu nějaká přímá nebo nepřímá konkurence? Jak je konkurence silná?
 </p>

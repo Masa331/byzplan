@@ -1,6 +1,4 @@
 @import "bootstrap";
-@import "wysihtml5_gem/wysihtml5";
-
 
 
 .muj-navbar {
@@ -28,12 +26,9 @@
 		margin-bottom:30px;
 	}
 }
-.wysihtml5-textarea {
-	margin-bottom:2px;
-}
 
 .btn-margin {
-	margin-top:3px;
+	margin-top:8px;
 }
 
 .my-ul {
@@ -50,10 +45,6 @@
 
 #logo {
 	margin-top:5px;
-}
-
-#wysihtml5-toolbar {
-	margin-bottom:8px;
 }
 
 #plan_name {

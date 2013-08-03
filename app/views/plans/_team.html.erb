@@ -1,13 +1,13 @@
 <h3 class="h3-border">Tým projektu:</h3>
-<p>
-	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :team, value: "#{@plan.team}", class: "tinymce span9", id: "team", rows: 15 %>
-			<%= tinymce %>
-			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
-	<% end %>
-</p>
 
-<h5>Obsah sekce:</h5>
+<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
+		<%= f.text_area :team, value: "#{@plan.team}", class: "tinymce span9", id: "team", rows: 15 %>
+		<%= tinymce %>
+		<%= f.submit "Uložit sekci", class: "btn btn-margin btn-primary" %>
+<% end %>
+
+
+<h4>Obsah sekce:</h4>
 <p>
 	Zde popište detailně tým, který se bude realizací projektu zabývat. Seznamte čtenáře s hlavními postavami týmu, jejich rolemi v projektu, zkušenostmi a motivací. Někteří investoři a odborníci z oboru tvrdí, že dobrý tým je na projektu vůbec to nejdůležitější.
 </p>

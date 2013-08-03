@@ -1,13 +1,13 @@
 <h3 class="h3-border">Popis produktu:</h3>
-<p>
-	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :product, value: "#{@plan.product}", class: "tinymce span9", id: "product", rows: 15 %>
-			<%= tinymce %>
-			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
-	<% end %>
-</p>
 
-<h5>Co by měl text obsahovat:</h5>
+<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
+		<%= f.text_area :product, value: "#{@plan.product}", class: "tinymce span9", id: "product", rows: 15 %>
+		<%= tinymce %>
+		<%= f.submit "Uložit sekci", class: "btn btn-margin btn-primary" %>
+<% end %>
+
+
+<h4>Co by měl text obsahovat:</h4>
 <p>
 	Zde popište detailně svůj produkt nebo službu, které chcete prodávat zákazníkům. Produkt popište co nejdetailněji od jeho výroby, přes obsah, funkce a formu, až po finální balení a doručení zákazníkovi. Je Váš produkt něčím inovativní? V čem jsou jeho konkurenční výhody? Jak je přizpůsobený požadavkům trhu a cílového zákazníka?
 </p>

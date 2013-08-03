@@ -1,5 +1,5 @@
 <h3 class="h3-border">Hlavička plánu:</h3>
-<p>Zde můžete editovat název plánu a Vaše kontaktní údaje, které budou zobrazeny v exportovaném PDF dokument.</p>
+<p>Zde můžete editovat název plánu a Vaše kontaktní údaje, které budou zobrazeny na titulní stránce v exportovaném PDF dokument.</p>
 
 <%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
 	<h5>Název plánu:</h5>
@@ -7,6 +7,5 @@
 	<h5>Kontaktní údaje:</h5>
 	<%= f.text_area :card, value: "#{@plan.card}", class: "tinymce", id:"card", rows: 4 %>
 	<%= tinymce %>
-	<br>
-	<%= f.submit "Uložit hlavičku", class: "btn btn-primary" %>
+	<%= f.submit "Uložit hlavičku", class: "btn btn-margin btn-primary" %>
 <% end %>

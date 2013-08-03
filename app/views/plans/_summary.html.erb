@@ -1,13 +1,12 @@
 <h3 class="h3-border">Představení projektu:</h3>
-<p>
-	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :summary, value: "#{@plan.summary}", class: "tinymce span9", id: "summary", rows: 15 %>
-			<%= tinymce %>
-			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
-	<% end %>
-</p>
 
-<h5>Co by měl text obsahovat:</h5>
+<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
+		<%= f.text_area :summary, value: "#{@plan.summary}", class: "tinymce span9", id: "summary", rows: 15 %>
+		<%= tinymce %>
+		<%= f.submit "Uložit sekci", class: "btn btn-primary btn-margin" %>
+<% end %>
+
+<h4>Co by měl text obsahovat:</h4>
 <p>
 	Představení projektu bude první věc, kterou si ve Vašem business plánu kdokoliv přečte. Proto je jejím hlavním úkolem čtenáře navnadit na další, detailnější části. Jako první věc byste měli představit samotný produkt nebo službu. Nebojte se jít rovnou k věci a nepřehánějte to s nic neříkající omáčkou okolo. Pokud máte vymyšlený nějaký zajímavý business model, můžete ho také nakousnout.
 </p>

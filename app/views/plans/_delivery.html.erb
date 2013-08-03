@@ -1,13 +1,13 @@
 <h3 class="h3-border">Obchodní model:</h3>
-<p>
-	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-		<%= f.text_area :delivery, value: "#{@plan.delivery}", class: "tinymce span9", id: "delivery", rows: 15 %>
-		<%= tinymce %>
-		<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
-	<% end %>
-</p>
 
-<h5>Obsah sekce:</h5>
+<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
+	<%= f.text_area :delivery, value: "#{@plan.delivery}", class: "tinymce span9", id: "delivery", rows: 15 %>
+	<%= tinymce %>
+	<%= f.submit "Uložit sekci", class: "btn btn-margin btn-primary" %>
+<% end %>
+
+
+<h4>Obsah sekce:</h4>
 <p>
 	Obchodní model je jedna z nejdůležitějších částí business plánu. Popisuje, jakým způsobem budete prodávat svůj produkt zákazníkovi. Budete provozovat kamenou prodejnu nebo e-shop? Jakou formu propagace značky/produktu zvolíte? Na co budete ve Vašem businessu klást největší důraz? Jaké jsou konkurenčí výhody Vašeho Business modelu? Čím detailněji budete mít svoji strategii promyšlenou a popsanou, tím lépe.
 </p>

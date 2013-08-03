@@ -1,10 +1,10 @@
 <div class="row">
-	
-		<div class="span12 well", id="plan_header">
-			URL adresa plánu: <b><%= plan_url %></b>
-			<br>
-			<%= link_to "Exportovat plán", generate_path, class: "btn btn-margin" %>
-		</div>
+	<div class="span12 well", id="plan_header">
+		Pro opětovný přístup k plánu a jeho sdílení použijte tuto URL adresu: <br>
+		<b><%= plan_url %></b>
+		<br>
+		<%= link_to "Exportovat plán", generate_path, class: "btn btn-margin" %>
+	</div>
 </div>
 
 <div class="row">
@@ -12,15 +12,15 @@
 		<%= render current_step %>
 	</div>
 	<div class="span3">
-			<h3 class="h3-border">Sekce plánu:</h3>
-			<ul class="my-ul">
-				<li><%= link_to "Hlavička plánu", plan_path(@plan.plan_id, step: "card") %></li>
-				<li><%= link_to "Představení projektu", plan_path(@plan.plan_id, step: "summary") %></li>
-				<li><%= link_to "Popis produktu", plan_path(@plan.plan_id, step: "product") %></li>
-				<li><%= link_to "Obchodní model", plan_path(@plan.plan_id, step: "delivery") %></li>
-				<li><%= link_to "Zákazníci", plan_path(@plan.plan_id, step: "customers") %></li>
-				<li><%= link_to "Trh", plan_path(@plan.plan_id, step: "market") %></li>
-				<li><%= link_to "Tým projektu", plan_path(@plan.plan_id, step: "team") %></li>
-			</ul>
+		<h3 class="h3-border">Sekce plánu:</h3>
+		<ul class="my-ul">
+			<li><%= link_to "Hlavička plánu", plan_path(@plan.plan_id, step: "card") %></li>
+			<li><%= link_to "Představení projektu", plan_path(@plan.plan_id, step: "summary") %></li>
+			<li><%= link_to "Popis produktu", plan_path(@plan.plan_id, step: "product") %></li>
+			<li><%= link_to "Obchodní model", plan_path(@plan.plan_id, step: "delivery") %></li>
+			<li><%= link_to "Zákazníci", plan_path(@plan.plan_id, step: "customers") %></li>
+			<li><%= link_to "Trh", plan_path(@plan.plan_id, step: "market") %></li>
+			<li><%= link_to "Tým projektu", plan_path(@plan.plan_id, step: "team") %></li>
+		</ul>
 	</div>
 </div>
