@@ -1,8 +1,8 @@
 <h3 class="h3-border">Zákazníci:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :customers, value: "#{@plan.customers}", class: "wysihtml5-textarea span9", id: "customers", rows: 15 %>
-			<%= render 'wysy_editor' %>
+			<%= f.text_area :customers, value: "#{@plan.customers}", class: "tinymce span9", id: "customers", rows: 15 %>
+			<%= tinymce %>
 			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
 	<% end %>
 </p>
@@ -11,5 +11,3 @@
 <p>
 	Abyste mohli úspěšně podnikat, je dobré znát detailně Vašeho zákazníka. Zkuste popsat, jaký Váš typický zákazník je, jak se chová, jaké má zvyklosti, co má a nemá rád atd. Můžete také ilustrovat, proč jste kvůli popsanému zákazníkovi navrhli takový a takový business model nebo produkt.
 </p>
-
-<%= render 'wysy_script' %>

@@ -1,8 +1,8 @@
 <h3 class="h3-border">Představení projektu:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :summary, value: "#{@plan.summary}", class: "wysihtml5-textarea span9", id: "summary", rows: 15 %>
-			<%= render 'wysy_editor' %>
+			<%= f.text_area :summary, value: "#{@plan.summary}", class: "tinymce span9", id: "summary", rows: 15 %>
+			<%= tinymce %>
 			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
 	<% end %>
 </p>
@@ -14,5 +14,3 @@
 <p>
 	Jako další věc je zde vhodné prezentovat svoji vizi. Nebojte se napsat, kde byste chtěli být za rok a kde za deset let. Čtenáře bude také určitě zajímat, jak jste se k projektu dostali a co Vás vede a motivuje k jeho realizaci.
 </p>
-
-<%= render 'wysy_script' %>

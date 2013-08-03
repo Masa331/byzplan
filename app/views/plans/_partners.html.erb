@@ -1,8 +1,8 @@
 <h3 class="h3-border">Partněři projektu:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :partners, value: "#{@plan.partners}", class: "wysihtml5-textarea span8", id: "partners", rows: 15 %>
-			<%= render 'wysy_editor' %>
+			<%= f.text_area :partners, value: "#{@plan.partners}", class: "tinymce span8", id: "partners", rows: 15 %>
+			<%= tinymce %>
 			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
 	<% end %>
 </p>
@@ -23,5 +23,3 @@
 <p>
 	<i>Do tohoto projektu jsem ochotný investovat všechen svůj čas i prostředky. Pro čokoládu mám velkou vášeň. Navíc mám praxi i z továrenským provozů, kde jsem provozoval celosvětovou síť továren na beton, takže mám praxi z HR, PR, logistiky apod.</i>
 </p>
-
-<%= render 'wysy_script' %>

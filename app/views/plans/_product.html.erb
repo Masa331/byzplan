@@ -1,8 +1,8 @@
 <h3 class="h3-border">Popis produktu:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :product, value: "#{@plan.product}", class: "wysihtml5-textarea span9", id: "product", rows: 15 %>
-			<%= render 'wysy_editor' %>
+			<%= f.text_area :product, value: "#{@plan.product}", class: "tinymce span9", id: "product", rows: 15 %>
+			<%= tinymce %>
 			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
 	<% end %>
 </p>
@@ -11,5 +11,3 @@
 <p>
 	Zde popište detailně svůj produkt nebo službu, které chcete prodávat zákazníkům. Produkt popište co nejdetailněji od jeho výroby, přes obsah, funkce a formu, až po finální balení a doručení zákazníkovi. Je Váš produkt něčím inovativní? V čem jsou jeho konkurenční výhody? Jak je přizpůsobený požadavkům trhu a cílového zákazníka?
 </p>
-
-<%= render 'wysy_script' %>

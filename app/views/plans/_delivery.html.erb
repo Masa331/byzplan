@@ -1,9 +1,9 @@
 <h3 class="h3-border">Obchodní model:</h3>
 <p>
 	<%= form_for @plan, url: plan_path(@plan.plan_id) do |f| %>
-			<%= f.text_area :delivery, value: "#{@plan.delivery}", class: "wysihtml5-textarea span9", id: "delivery", rows: 15 %>
-			<%= render 'wysy_editor' %>
-			<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
+		<%= f.text_area :delivery, value: "#{@plan.delivery}", class: "tinymce span9", id: "delivery", rows: 15 %>
+		<%= tinymce %>
+		<%= f.submit "Uložit sekci", class: "btn btn-primary" %>
 	<% end %>
 </p>
 
@@ -22,5 +22,3 @@
 		<li>Zda máte nějaké zajímavé partnery</li>
 		<li>Jaké jsou možnosti firemního růstu a plány do budoucna</li>
 	</ul>
-
-<%= render 'wysy_script' %>
