@@ -4,6 +4,7 @@
 		<b><%= plan_url %></b>
 		<br>
 		<%= link_to "Exportovat plán", generate_path, class: "btn btn-margin" %>
+		<%= link_to "Náhled PDF", plan_path(@plan.plan_id, format: :pdf), class: "btn btn-margin" %>
 	</div>
 </div>
 

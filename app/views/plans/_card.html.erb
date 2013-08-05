@@ -7,5 +7,5 @@
 	<h5>Kontaktní údaje:</h5>
 	<%= f.text_area :card, value: "#{@plan.card}", class: "tinymce", id:"card", rows: 4 %>
 	<%= tinymce %>
-	<%= f.submit "Uložit hlavičku", class: "btn btn-margin btn-primary" %>
+	<%= f.submit "Uložit hlavičku", class: "btn btn-margin btn-primary", id: "Ulozit" %>
 <% end %>

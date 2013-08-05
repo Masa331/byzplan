@@ -1,12 +1,13 @@
 # encoding: UTF-8
 
 require 'spec_helper'
+require "pp"
 
 describe "PlanPages" do
 
 	subject{page}
 
-	describe "generating new plan" do
+	describe "Generating new plan" do
 		let(:submit){"Vytvo"}
 		before{visit new_plan_path}
 		it{should have_selector('h1', text: 'Zadejte')}
@@ -27,7 +28,8 @@ describe "PlanPages" do
 		end
 	end
 
-	describe "show page" do
+	describe "Show page" do
+		
 		let(:plan){FactoryGirl.create(:plan)}
 
 		describe "with non-existant plan_id" do
@@ -36,24 +38,21 @@ describe "PlanPages" do
 				visit plan_path(plan.plan_id)
 			end
 
-			it{should have_selector('h1', text: "non-existant plan")}
+			it{should have_selector('h1', text: "Hledaný plán neexistuje")}
 		end
 
 		describe "of existing plan" do
-			before do
-				cookies[:step] = "summary"
-				visit plan_path(plan.plan_id)
-			end
+			before{visit plan_path(plan.plan_id)}
 
-			it{should have_selector('h3', text: "Představení projektu")}
+			it{should have_selector('h3', text: "Hlavička plánu:")}
 
 			it{should have_selector('.span9')}
 			it{should have_selector('.span3')}
 
 			describe "should have proper step links and buttons" do
 
-				xit{should have_link('Export plan')}
-				xit{should have_link('Mail plan URL')}
+				it{should have_link('Exportovat plán')}
+				it{should have_link('Náhled PDF')}
 
 				it{should have_link('Hlavička plánu')}
 				it{should have_link('Představení projektu')}
@@ -63,71 +62,68 @@ describe "PlanPages" do
 				it{should have_link('Trh')}
 				it{should have_link('Tým projektu')}
 
-
-				it{should have_button('Ulo')}
+				it{should have_button('Uložit hlavičku')}
 			end
 
-			describe "with no step parameter" do
+			describe "with step parameter for summary" do
+				before{visit plan_path(plan.plan_id, step: 'summary')}
 				it{should have_field('summary', with: "#{plan.summary}")}
 				it{should_not have_field('plan_team')}
-				it{should_not have_field('plan_product')}
-			
+				it{should have_button('Uložit sekci')}
 			end
 
 			describe "with step parameter for team field" do
 				before{visit plan_path(plan.plan_id, step: 'team')}
 				it{should have_field('team', with: "#{plan.team}")}
 				it{should_not have_field('plan_summary')}
-				it{should_not have_field('plan_product')}
+				it{should have_button('Uložit sekci')}
 			end
 
 			describe "with step parameter for product field" do
 				before{visit plan_path(plan.plan_id, step: 'product')}
 				it{should have_field('product', with: "#{plan.product}")}
 				it{should_not have_field('plan_summary')}
-				it{should_not have_field('plan_team')}
+				it{should have_button('Uložit sekci')}
 			end
 
 			describe "with step parameter for market field" do
 				before{visit plan_path(plan.plan_id, step: 'market')}
 				it{should have_field('market', with: "#{plan.market}")}
 				it{should_not have_field('plan_summary')}
-				it{should_not have_field('plan_product')}
+				it{should have_button('Uložit sekci')}
 			end
 
 			describe "with step parameter for customers field" do
 				before{visit plan_path(plan.plan_id, step: 'customers')}
 				it{should have_field('customers', with: "#{plan.customers}")}
 				it{should_not have_field('plan_summary')}
-				it{should_not have_field('plan_product')}
+				it{should have_button('Uložit sekci')}
+			end
+
+			describe "with step parameter for delivery field" do
+				
+				before{visit plan_path(plan.plan_id, step: 'delivery')}
+				it{should have_field('delivery', with: "#{plan.delivery}")}
+				it{should have_button('Uložit sekci')}
 			end
 
 			describe "with step parameter for contacts field" do
 				before{visit plan_path(plan.plan_id, step: 'card')}
-				it{should have_field('plan_name', with: "#{plan.name}")}
-				it{should_not have_field('plan_summary')}
-				it{should_not have_field('plan_product')}
-			end
+				it{should have_field('plan_name', with: "Kavarna")}
+				it{should have_button('Uložit hlavičku')}
 
-			describe "with step parameter for delivery field" do
-				before{visit plan_path(plan.plan_id, step: 'delivery')}
-				it{should have_field('delivery', with: "#{plan.delivery}")}
-				it{should_not have_field('plan_summary')}
-				it{should_not have_field('plan_product')}
-			end
+				describe "updating" do
+					let(:plan){FactoryGirl.create(:plan)}
+					before do
+						fill_in "plan_name", with: "Tovarna"
+						click_button "Ulozit"
+						plan.reload
+					end
 
-			describe "with step parameter for summary field" do
-				before{visit plan_path(plan.plan_id, step: 'summary')}
-				it{should have_field('summary', with: "#{plan.summary}")}
-				it{should_not have_field('plan_team')}
-				it{should_not have_field('plan_product')}
-			end
-
-			describe "with step parameter for partners field" do
-				before{visit plan_path(plan.plan_id, step: 'partners')}
-				xit{should have_field('partners', with: "#{plan.partners}")}
-				xit{should_not have_field('plan_summary')}
-				xit{should_not have_field('plan_product')}
+					it{should have_selector('.alert-success', text: "Sekce")}
+					it{should have_field('plan_name')}
+					it{should have_field('plan_name', with: "#{plan.name}")}
+				end
 			end
 		end
 	end
