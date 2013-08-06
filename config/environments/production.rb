@@ -3,7 +3,7 @@ Byzplan::Application.configure do
   # Code is not reloaded between requests
   
   # Serve pre-gzipped static assets
-  config.middleware.use Rack::Deflater
+  config.middleware.insert_after ActionDispatch::Static, Rack::Deflater
 
   config.cache_classes = true
 
