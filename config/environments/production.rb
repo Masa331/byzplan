@@ -1,8 +1,9 @@
 Byzplan::Application.configure do
-    # Settings specified here will take precedence over those in config/application.rb
+   # Settings specified here will take precedence over those in config/application.rb
   # Code is not reloaded between requests
   
-  config.middleware.insert_before(0, Rack::Deflater)
+  # Serve pre-gzipped static assets
+  middleware.insert_after('Rack::Cache', Middleware::CompressedStaticAssets, paths["public"].first, config.assets.prefix, config.static_cache_control)
 
   config.cache_classes = true
 
