@@ -12,7 +12,7 @@ end
 module Byzplan
   class Application < Rails::Application
  
-    config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
+    config.middleware.insert_before 0, Rack::Deflater
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
