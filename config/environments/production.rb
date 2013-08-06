@@ -3,11 +3,11 @@ Byzplan::Application.configure do
   # Code is not reloaded between requests
   
   # Serve pre-gzipped static assets
-  middleware.insert_after('Rack::Cache', Middleware::CompressedStaticAssets, paths["public"].first, config.assets.prefix, config.static_cache_control)
+  config.middleware.insert_after( Rack::Cache, Middleware::CompressedStaticAssets, paths["public"].first, config.assets.prefix, config.static_cache_control)
 
   config.cache_classes = true
 
-  # Full error reports are disabled and caching is turned on
+  # Full error reports are disabled and carails .htaccessching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
