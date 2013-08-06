@@ -15,7 +15,7 @@ Byzplan::Application.configure do
   # Tohle predtim bylo false!!!
   config.serve_static_assets = true
 
-  coonfig.static_cache_control = "public, max-age=#{1.year.to_i}"
+  config.static_cache_control = "public, max-age=#{1.year.to_i}"
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
