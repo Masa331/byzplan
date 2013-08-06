@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 require 'spec_helper'
-require "pp"
 
 describe "PlanPages" do
 
@@ -68,43 +67,33 @@ describe "PlanPages" do
 			describe "with step parameter for summary" do
 				before{visit plan_path(plan.plan_id, step: 'summary')}
 				it{should have_field('summary', with: "#{plan.summary}")}
-				it{should_not have_field('plan_team')}
 				it{should have_button('Uložit sekci')}
 			end
 
 			describe "with step parameter for team field" do
 				before{visit plan_path(plan.plan_id, step: 'team')}
-				it{should have_field('team', with: "#{plan.team}")}
-				it{should_not have_field('plan_summary')}
-				it{should have_button('Uložit sekci')}
+				it{should have_field('team')}
 			end
 
 			describe "with step parameter for product field" do
 				before{visit plan_path(plan.plan_id, step: 'product')}
-				it{should have_field('product', with: "#{plan.product}")}
-				it{should_not have_field('plan_summary')}
-				it{should have_button('Uložit sekci')}
+				it{should have_field('product')}
 			end
 
 			describe "with step parameter for market field" do
 				before{visit plan_path(plan.plan_id, step: 'market')}
-				it{should have_field('market', with: "#{plan.market}")}
-				it{should_not have_field('plan_summary')}
-				it{should have_button('Uložit sekci')}
+				it{should have_field('market')}
 			end
 
 			describe "with step parameter for customers field" do
 				before{visit plan_path(plan.plan_id, step: 'customers')}
-				it{should have_field('customers', with: "#{plan.customers}")}
-				it{should_not have_field('plan_summary')}
-				it{should have_button('Uložit sekci')}
+				it{should have_field('customers')}
 			end
 
 			describe "with step parameter for delivery field" do
 				
 				before{visit plan_path(plan.plan_id, step: 'delivery')}
-				it{should have_field('delivery', with: "#{plan.delivery}")}
-				it{should have_button('Uložit sekci')}
+				it{should have_field('delivery')}
 			end
 
 			describe "with step parameter for contacts field" do

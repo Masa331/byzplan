@@ -34,7 +34,4 @@ describe "Plan" do
 	it{should respond_to(:delivery)}
 	it{should respond_to(:card)}
 
-
-	#otestovat, ze e vzdy unikatni plan_id
-
 end
