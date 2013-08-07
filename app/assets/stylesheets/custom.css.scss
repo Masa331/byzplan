@@ -1,4 +1,4 @@
-@import "bootstrap";
+// @import "bootstrap";
 
 
 .muj-navbar {
@@ -36,7 +36,7 @@
 }
 
 .h3-border {
-	border-bottom:1px solid LightGrey;
+	border-bottom:1px solid grey;
 }
 
 #sidebar {
@@ -71,11 +71,11 @@ footer {
 	margin-top:45px;
 	padding-top:5px;
 	border-top: 1px solid black;
-	color: grayMedium;
+	color: gray;
 	a {
-		color:$gray;
+		color:gray;
 		&:hover {
-			color:grayDarker;
+			color:gray;
 		}
 	}
 	small {

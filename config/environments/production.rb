@@ -3,20 +3,15 @@ require 'active_support/time'
 Byzplan::Application.configure do
    # Settings specified here will take precedence over those in config/application.rb
   # Code is not reloaded between requests
-  
-  # Serve pre-gzipped static assets
-  #config.middleware.use Rack::Deflater
 
   config.cache_classes = true
 
   # Full error reports are disabled and carails .htaccessching is turned on
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
 
-
-  # bylo false
-  config.serve_static_assets = true
+  config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
