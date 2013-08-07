@@ -6,7 +6,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'bootstrap-sass', '~> 2.3.1.0'
+# gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'wicked_pdf'
 gem 'tinymce-rails'
 gem 'execjs'
