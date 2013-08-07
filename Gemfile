@@ -11,7 +11,7 @@ gem 'wicked_pdf'
 # gem 'tinymce-rails'
 gem 'execjs'
 gem 'rvm-capistrano'
-gem 'jquery-rails'
+# gem 'jquery-rails'
 gem 'rack-rewrite'
 
 group :production do
